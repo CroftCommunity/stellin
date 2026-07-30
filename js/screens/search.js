@@ -59,7 +59,7 @@ function renderPeople(panel, people, viewer, premium) {
     const d = viewer ? degree(viewer, p.id) : 4;
     const blur = !premium && d >= 4; // 3rd+/out-of-network blurred for free tier
     const nameEl = blur
-      ? el('span', { class: 'blurred-name' }, ['Meridian member'])
+      ? el('span', { class: 'blurred-name' }, ['Stellin member'])
       : el('a', { href: '#/in/' + u.slug, class: 'strong' }, [u.name]);
     const nameRow = el('div', { class: 'row', style: { gap: '6px' } }, [nameEl]);
     if (viewer && !blur) { const b = degreeBadge(viewer, p.id); if (b.textContent !== '') nameRow.append(document.createTextNode('·'), b); }

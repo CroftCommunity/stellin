@@ -64,7 +64,7 @@ export function renderDevbar() {
   inner.appendChild(btn('Seed', 'devbar-btn', async () => {
     replaceEvents(buildSeedEvents(Date.now()), getDevPrefs());
     validatePersona();
-    toast('Seeded a lived-in Meridian.', { type: 'success' });
+    toast('Seeded a lived-in Stellin.', { type: 'success' });
     hardRerender();
   }));
 
@@ -72,7 +72,7 @@ export function renderDevbar() {
   inner.appendChild(btn('Delete All', 'devbar-btn', async () => {
     const ok = await confirmDialog({
       title: 'Delete all content?',
-      message: 'This resets Meridian to accounts only — the 9 personas keep their name, headline, and avatar. Everything else is removed.',
+      message: 'This resets Stellin to accounts only — the 9 personas keep their name, headline, and avatar. Everything else is removed.',
       confirmLabel: 'Delete all', danger: true,
     });
     if (!ok) return;
@@ -88,7 +88,7 @@ export function renderDevbar() {
     const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
     const a = document.createElement('a');
     a.href = URL.createObjectURL(blob);
-    a.download = 'meridian-state.json';
+    a.download = 'stellin-state.json';
     a.click();
     setTimeout(() => URL.revokeObjectURL(a.href), 1000);
   }));

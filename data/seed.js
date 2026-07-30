@@ -8,7 +8,7 @@ export const PERSONAS = [
   { id: 'maya',   name: 'Maya Chen',       headline: 'Senior Product Manager at Northwind Labs', tier: 'free',    credits: 0, location: 'Seattle, WA' },
   { id: 'marcus', name: 'Marcus Webb',     headline: 'Technical Recruiter at TalentBridge',       tier: 'premium', credits: 5, location: 'Austin, TX' },
   { id: 'jordan', name: 'Jordan Ellis',    headline: 'Software Engineer · Open to work',          tier: 'free',    credits: 0, location: 'Denver, CO', openToWork: true },
-  { id: 'sam',    name: 'Sam Okafor',      headline: 'New to Meridian',                           tier: 'free',    credits: 0, location: 'Chicago, IL' },
+  { id: 'sam',    name: 'Sam Okafor',      headline: 'New to Stellin',                           tier: 'free',    credits: 0, location: 'Chicago, IL' },
   { id: 'priya',  name: 'Priya Sharma',    headline: 'CS Senior at Lakeview University',          tier: 'free',    credits: 0, location: 'Boston, MA' },
   { id: 'david',  name: 'David Park',      headline: 'Independent Analyst · Market & strategy',   tier: 'free',    credits: 0, location: 'New York, NY' },
   { id: 'elena',  name: 'Elena Rodriguez', headline: 'Founder at Brightpath Health',              tier: 'free',    credits: 0, location: 'San Francisco, CA' },

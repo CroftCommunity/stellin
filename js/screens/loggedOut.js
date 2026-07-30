@@ -10,7 +10,7 @@ export default function loggedOut(outlet) {
     el('div', { class: 'lo-hero-inner container' }, [
       el('div', { class: 'lo-hero-copy' }, [
         h1('Where careers find their bearings.'),
-        el('p', { class: 'lo-lead' }, ['Meridian is a professional network for sharing work, finding roles, and staying close to the people who vouch for you. This is a self-contained demo — everything lives in your browser.']),
+        el('p', { class: 'lo-lead' }, ['Stellin is a professional network for sharing work, finding roles, and staying close to the people who vouch for you. This is a self-contained demo — everything lives in your browser.']),
         el('div', { class: 'row', style: { gap: '12px', marginTop: '16px' } }, [
           el('a', { href: '#/join', class: 'btn btn-primary' }, ['Join now']),
           el('a', { href: '#/jobs', class: 'btn btn-outline' }, ['Browse jobs']),
@@ -28,7 +28,7 @@ export default function loggedOut(outlet) {
   const list = teaserPosts();
   if (!list.length) {
     teaser.appendChild(el('div', { class: 'card card-pad muted' }, [
-      'Nothing to preview yet. Use the DEV bar to ', el('strong', {}, ['Seed']), ' a lived-in Meridian, then explore.',
+      'Nothing to preview yet. Use the DEV bar to ', el('strong', {}, ['Seed']), ' a lived-in Stellin, then explore.',
     ]));
   } else {
     const grid = el('div', { class: 'lo-teaser-grid' });

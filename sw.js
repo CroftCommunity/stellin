@@ -1,7 +1,7 @@
 // sw.js — app-shell caching. Cache-first with a versioned cache name.
 // Bump CACHE_VERSION on every deploy. Skip with ?nosw (handled in app.js by
 // not registering) — the SW itself also honors a bypass query on requests.
-const CACHE_VERSION = 'meridian-shell-v1';
+const CACHE_VERSION = 'stellin-shell-v1';
 const SHELL = [
   './',
   './index.html',

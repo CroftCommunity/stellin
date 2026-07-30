@@ -1,6 +1,6 @@
 {
-  "name": "Meridian",
-  "short_name": "Meridian",
+  "name": "Stellin",
+  "short_name": "Stellin",
   "description": "A professional networking demo that runs entirely in your browser.",
   "start_url": "./",
   "scope": "./",
