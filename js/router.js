@@ -51,7 +51,7 @@ async function render() {
       const ctx = { params, query, hash };
       const result = await r.handler(outlet, ctx);
       if (typeof result === 'function') currentCleanup = result;
-      document.title = (typeof r.title === 'function' ? r.title(ctx) : r.title) || 'Meridian';
+      document.title = (typeof r.title === 'function' ? r.title(ctx) : r.title) || 'Stellin';
       render._current = hash;
       finishNav(hash);
       return;
@@ -70,7 +70,7 @@ function finishNav(hash) {
     h1.setAttribute('tabindex', '-1');
     h1.focus({ preventScroll: true });
   }
-  window.dispatchEvent(new CustomEvent('meridian:navigated', { detail: { hash } }));
+  window.dispatchEvent(new CustomEvent('stellin:navigated', { detail: { hash } }));
 }
 
 export function start() {

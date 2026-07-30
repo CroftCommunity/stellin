@@ -38,7 +38,7 @@ export default function onboarding(outlet) {
   }
 
   function renderIdentity() {
-    card.appendChild(h1('Join Meridian'));
+    card.appendChild(h1('Join Stellin'));
     card.appendChild(el('p', { class: 'muted' }, ['This creates a brand-new sample persona and signs you in as them.']));
     const name = el('input', { class: 'input', placeholder: 'Full name', 'aria-label': 'Full name' });
     const headline = el('input', { class: 'input', placeholder: 'Headline (e.g. Software Engineer)', 'aria-label': 'Headline' });
@@ -47,7 +47,7 @@ export default function onboarding(outlet) {
     const next = el('button', { class: 'btn btn-primary', onclick: () => {
       if (!name.value.trim()) { toast('Enter your name to continue.', { type: 'danger' }); name.focus(); return; }
       const id = 'user_' + slugify(name.value.trim()) + '_' + uid().slice(-4);
-      actions.createPersona({ id, name: name.value.trim(), headline: headline.value.trim() || 'New to Meridian', location: location.value.trim() });
+      actions.createPersona({ id, name: name.value.trim(), headline: headline.value.trim() || 'New to Stellin', location: location.value.trim() });
       state.newId = id;
       setDevPref('persona', id); invalidate();
       state.step = 1; render();
@@ -103,7 +103,7 @@ export default function onboarding(outlet) {
       frontierChip('contact-import-real'),
     ]));
     const suggestions = sel.users().filter(u => u.id !== state.newId && u.id !== 'sam').slice(0, 8);
-    card.appendChild(el('p', { class: 'small muted' }, ['People already on Meridian:']));
+    card.appendChild(el('p', { class: 'small muted' }, ['People already on Stellin:']));
     const grid = el('div', { class: 'pymk-grid pymk-grid-lg' });
     suggestions.forEach(u => grid.appendChild(connectCard(u)));
     card.appendChild(grid);
@@ -126,7 +126,7 @@ export default function onboarding(outlet) {
 
   function importModal() {
     const body = el('div', { class: 'stack' }, [
-      el('p', {}, ['Meridian would like to access your contacts to find people you know.']),
+      el('p', {}, ['Stellin would like to access your contacts to find people you know.']),
       el('p', { class: 'small subtle' }, ['This is a simulated permission prompt — no real contacts are read.']),
     ]);
     const allow = el('button', { class: 'btn btn-primary', onclick: () => { h.close(); toast('Found people you may know below.', { type: 'success' }); } }, ['Allow']);

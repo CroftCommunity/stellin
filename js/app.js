@@ -23,20 +23,20 @@ store.init();
 router.mount(document.getElementById('app-root'));
 
 // ---- routes ----
-router.register('#/', (o, c) => root(o, c), 'Meridian');
-router.register('#/feed', feed, 'Home · Meridian');
-router.register('#/join', onboarding, 'Join Meridian');
-router.register('#/me', (o, c) => { const id = me(); if (!id) return loggedOut(o, c); location.hash = '#/in/' + store.sel.user(id).slug; }, 'Your profile · Meridian');
-router.register('#/in/:slug', profile, (c) => `${c.params.slug} · Meridian`);
-router.register('#/network', network, 'My network · Meridian');
-router.register('#/jobs', jobs, 'Jobs · Meridian');
-router.register('#/employer', employer, 'Hiring · Meridian');
-router.register('#/messaging', messaging, 'Messaging · Meridian');
-router.register('#/notifications', notifications, 'Notifications · Meridian');
-router.register('#/search', searchScreen, 'Search · Meridian');
-router.register('#/settings', settings, 'Settings · Meridian');
-router.register('#/company/:slug', company, (c) => `${c.params.slug} · Meridian`);
-router.register('#/frontiers', frontiers, 'Frontiers · Meridian');
+router.register('#/', (o, c) => root(o, c), 'Stellin');
+router.register('#/feed', feed, 'Home · Stellin');
+router.register('#/join', onboarding, 'Join Stellin');
+router.register('#/me', (o, c) => { const id = me(); if (!id) return loggedOut(o, c); location.hash = '#/in/' + store.sel.user(id).slug; }, 'Your profile · Stellin');
+router.register('#/in/:slug', profile, (c) => `${c.params.slug} · Stellin`);
+router.register('#/network', network, 'My network · Stellin');
+router.register('#/jobs', jobs, 'Jobs · Stellin');
+router.register('#/employer', employer, 'Hiring · Stellin');
+router.register('#/messaging', messaging, 'Messaging · Stellin');
+router.register('#/notifications', notifications, 'Notifications · Stellin');
+router.register('#/search', searchScreen, 'Search · Stellin');
+router.register('#/settings', settings, 'Settings · Stellin');
+router.register('#/company/:slug', company, (c) => `${c.params.slug} · Stellin`);
+router.register('#/frontiers', frontiers, 'Frontiers · Stellin');
 router.setNotFound((o) => root(o, {}));
 
 function root(outlet, ctx) {
@@ -66,8 +66,8 @@ store.subscribe(() => {
   });
 });
 
-window.addEventListener('meridian:navigated', () => { renderChrome(); });
-window.addEventListener('meridian:storage-full', () => {
+window.addEventListener('stellin:navigated', () => { renderChrome(); });
+window.addEventListener('stellin:storage-full', () => {
   import('./ui/toast.js').then(({ toast }) => toast('Storage is full. Export and trim your data, or Delete All.', { type: 'danger' }));
 });
 

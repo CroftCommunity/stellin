@@ -47,8 +47,8 @@ function renderTopNav() {
   const brand = document.createElement('a');
   brand.href = viewer ? '#/feed' : '#/';
   brand.className = 'brand';
-  brand.innerHTML = `<span class="brand-mark" aria-hidden="true">◔</span><span class="brand-name">Meridian</span>`;
-  brand.setAttribute('aria-label', 'Meridian home');
+  brand.innerHTML = `<span class="brand-mark" aria-hidden="true">◔</span><span class="brand-name">Stellin</span>`;
+  brand.setAttribute('aria-label', 'Stellin home');
   bar.appendChild(brand);
 
   // search

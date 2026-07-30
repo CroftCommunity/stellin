@@ -28,7 +28,7 @@ function persist() {
   clearTimeout(_saveTimer);
   _saveTimer = setTimeout(() => {
     try { storage.save({ events: _events, devPrefs: _devPrefs }); }
-    catch (e) { window.dispatchEvent(new CustomEvent('meridian:storage-full')); }
+    catch (e) { window.dispatchEvent(new CustomEvent('stellin:storage-full')); }
   }, 250);
 }
 

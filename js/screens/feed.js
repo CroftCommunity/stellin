@@ -116,7 +116,7 @@ function newsModule() {
     ['Referrals still win', 'Members with referrals hear back sooner.'],
   ];
   return el('div', { class: 'card card-pad news-module' }, [
-    el('h2', { class: 'news-title' }, ['Meridian news']),
+    el('h2', { class: 'news-title' }, ['Stellin news']),
     el('ul', { class: 'news-list' }, items.map(([t, s]) => el('li', {}, [
       el('div', { class: 'strong small' }, [t]), el('div', { class: 'subtle small' }, [s]),
     ]))),
