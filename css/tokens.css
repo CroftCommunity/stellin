@@ -1,0 +1,103 @@
+/* tokens.css — all design tokens as custom properties.
+   Meridian visual identity: a slate-leaning professional blue (deliberately
+   NOT LinkedIn's brand blue), a warm neutral background, system serif display. */
+:root {
+  /* Primary: a slate/indigo-leaning blue */
+  --c-primary: #2f5d8a;
+  --c-primary-hover: #264d73;
+  --c-primary-active: #1e3f5f;
+  --c-primary-soft: #eaf1f8;
+  --c-primary-contrast: #ffffff;
+
+  /* Semantic */
+  --c-success: #2f7a4d;
+  --c-success-soft: #e7f3ec;
+  --c-warning: #b5750c;
+  --c-warning-soft: #fbf1dd;
+  --c-danger: #b23b3b;
+  --c-danger-soft: #f8e9e9;
+
+  /* Warm neutral ramp (not pure gray — a touch warm) */
+  --n-0: #ffffff;
+  --n-50: #faf9f7;   /* app background — warm neutral */
+  --n-100: #f3f1ed;
+  --n-200: #e8e5df;
+  --n-300: #d7d3ca;
+  --n-400: #b3ada1;
+  --n-500: #8a8478;
+  --n-600: #635d52;
+  --n-700: #46413a;
+  --n-800: #2c2823;
+  --n-900: #1a1712;
+
+  /* Reaction accent colors — one per reaction */
+  --r-like: #2f5d8a;
+  --r-celebrate: #2f7a4d;
+  --r-support: #7a5cc0;
+  --r-insightful: #b5750c;
+  --r-funny: #1f9b9b;
+
+  /* Surfaces */
+  --surface: var(--n-0);
+  --surface-sunken: var(--n-50);
+  --border: var(--n-200);
+  --border-strong: var(--n-300);
+  --text: var(--n-900);
+  --text-muted: var(--n-600);
+  --text-subtle: var(--n-500);
+  --link: var(--c-primary);
+
+  /* Typography */
+  --font-ui: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: Charter, Georgia, "Times New Roman", serif;
+  --fs-13: 0.8125rem;
+  --fs-14: 0.875rem;
+  --fs-16: 1rem;
+  --fs-20: 1.25rem;
+  --fs-25: 1.5625rem;
+  --fs-31: 1.9375rem;
+  --lh-body: 1.5;
+  --lh-heading: 1.25;
+
+  /* Spacing (8-point scale) */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-6: 24px;
+  --s-8: 32px;
+
+  /* Radius */
+  --radius-card: 8px;
+  --radius-pill: 999px;
+  --radius-sm: 4px;
+
+  /* Elevation (overlays only) */
+  --shadow-overlay: 0 6px 24px rgba(26, 23, 18, 0.14), 0 1px 3px rgba(26, 23, 18, 0.08);
+  --shadow-card: none;
+
+  /* Layout */
+  --container: 1128px;
+  --col-left: 225px;
+  --col-center: 552px;
+  --col-right: 300px;
+  --gutter: 24px;
+
+  /* Nav heights */
+  --devbar-h: 40px;
+  --topnav-h: 54px;
+  --tabbar-h: 56px;
+
+  /* Focus ring */
+  --focus-ring: 0 0 0 2px var(--n-0), 0 0 0 4px var(--c-primary);
+
+  /* PWA theme */
+  --theme-color: #2f5d8a;
+  --bg-color: #faf9f7;
+
+  --z-devbar: 60;
+  --z-nav: 50;
+  --z-modal: 100;
+  --z-toast: 120;
+  --z-popover: 90;
+}

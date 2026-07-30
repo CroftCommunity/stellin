@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Meridian">
+  <rect width="512" height="512" rx="96" fill="#2f5d8a"/>
+  <!-- concentric-dot degree glyph: the product's signature -->
+  <circle cx="256" cy="256" r="150" fill="none" stroke="#ffffff" stroke-width="16" opacity="0.35"/>
+  <circle cx="256" cy="256" r="96" fill="none" stroke="#ffffff" stroke-width="16" opacity="0.6"/>
+  <circle cx="256" cy="256" r="40" fill="#ffffff"/>
+</svg>
